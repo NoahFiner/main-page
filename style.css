@@ -1,0 +1,393 @@
+* {
+  margin: 0;
+  font-family: helvetica, sans-serif;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+body, html {
+  overflow-x: hidden;
+}
+
+#everything {
+  width: 100vw;
+  height: auto;
+  background-color: #4FA838;
+}
+
+#fixed-outer {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+
+#fixed-relative {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+#header-outer {
+  height: 15vh;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  background-color: #0E1F0A;
+  white-space: nowrap;
+  background-image: url('transparent-background.png');
+  box-shadow: 0 0 10px 5px #000;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+#header-outer.xinabox {
+  background-color: #1f1f1f;
+}
+#header-outer.joanna {
+  background-color: white;
+  background-image: url('joanna/translucent-fibres.png');
+}
+#header-outer.word {
+  background-color: #4D1C19;
+}
+#header-outer.sqar {
+  background-color: blue;
+  background-image: url('sqar/pixelated-background.png');
+  border-bottom: 2px solid black;
+}
+#header-outer.bri {
+  background-color: #14382e;
+}
+
+#logo-outer {
+  width: 15vh;
+  height: 15vh;
+  line-height: 15vh;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+#logo-inner {
+  background-color: #56B83D;
+  height: 13vh;
+  width: 13vh;
+  margin-top: 1vh;
+  line-height: 13vh;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 2px;
+  border: 0 solid transparent;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transform: rotate(-7deg);
+  -webkit-transform: rotate(-7deg);
+  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+}
+
+#logo-inner.xinabox {
+  border: 1px solid #4CB4C3;
+  background-color: transparent;
+}
+
+#logo-inner.joanna, .hr-header.joanna {
+  background-color: #C3DEA6;
+}
+
+#logo-inner.word, .hr-header.word {
+  background-color: #EBC4C2;
+}
+
+#logo-inner.sqar, .hr-header.sqar {
+  background-color: white;
+}
+
+#logo-inner.sqar {
+  margin-top: 0;
+}
+
+#logo-inner.bri, .hr-header.bri {
+  background-color: #51c7a8;
+}
+
+#logo-text {
+  color: #0E1F0A;
+  font-weight: 900;
+  font-size: 10vh;
+  text-align: center;
+  vertical-align: middle;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+#logo-text.xinabox {
+  text-shadow: -1px 0 #4CB4C3, 0 1px #4CB4C3, 1px 0 #4CB4C3, 0 -1px #4CB4C3;
+}
+
+#logo-text.joanna {
+  color: white;
+}
+
+#logo-text.word {
+  color: #4D1C19;
+  font-family: serif;
+}
+
+#logo-text.sqar {
+  color: #3137BF;
+}
+
+#logo-text.bri {
+  color: #14382e;
+}
+
+.hr-vert {
+  width: 1px;
+  height: 60%;
+  margin-bottom: 2.5vh;
+  background-color: white;
+  display: inline-block;
+}
+
+.hr-header {
+  background-color: #56B83D;
+  margin-left: 2.5vw;
+}
+
+.hr-header.xinabox {
+  background-color: #4CB4C3;
+}
+
+#switchy-swatchy-outer {
+  display: inline-block;
+  height: 14vh;
+  margin-bottom: 0.25vh;
+  width: 20vw;
+  margin-left: 1vw;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#switchy-swatchy-outer.sqar {
+  height: 15vh;
+}
+
+#switchy-swatchy-inner {
+  height: 100%;
+  width: auto;
+  margin-left: 0px;
+  white-space: nowrap;
+  overflow: visible;
+  transition: margin-left 0.5s;
+  -webkit-transition: margin-left 0.5s;
+}
+
+#switchy-swatchy-inner.home {
+  margin-left: 0;
+}
+#switchy-swatchy-inner.xinabox {
+  margin-left: -20vw;
+}
+#switchy-swatchy-inner.joanna {
+  margin-left: -40vw;
+}
+#switchy-swatchy-inner.word {
+  margin-left: -60vw;
+}
+#switchy-swatchy-inner.sqar {
+  margin-left: -82vw;
+}
+#switchy-swatchy-inner.bri {
+  margin-left: -100vw;
+}
+
+
+#switchy-swatchy-inner * {
+  display: inline-block;
+  width: 20vw;
+  height: 100%;
+  background-size: contain;
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+}
+
+#ss-xinabox {
+  background-image: url('xinabox/logo.png');
+}
+#ss-joanna {
+  background-image: url('joanna/logo.png');
+}
+#ss-word {
+  background-image: url('word/logo.png');
+}
+#ss-sqar {
+  background-image: url('sqar/logo.png');
+}
+#ss-bri {
+  background-image: url('bri/logo.png');
+}
+
+#right-outer {
+  width: auto;
+  height: 15vh;
+  line-height: 15vh;
+  float: right;
+  clear: both;
+  margin-right: 1vw;
+  white-space: nowrap;
+}
+
+.header-link {
+  font-size: 3vh;
+  vertical-align: middle;
+  text-align: center;
+  margin-left: 0.25vw;
+  margin-right: 0.25vw;
+  border-bottom: 0 solid transparent;
+  text-decoration: none;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+}
+
+.header-link::after {
+  content: '';
+}
+
+.header-link.home {
+  color: #56B83D;
+  font-weight: 900;
+  line-height: 15vh;
+  vertical-align: bottom;
+  margin-bottom: 1vh;
+}
+
+.header-link.home:hover {
+  color: #AFE0A3;
+}
+
+/*xinabox*/
+.header-link.xinabox {
+  color: white;
+  font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Ultra Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
+  line-height: 26vh;
+  top: 0px;
+  opacity: 0.75;
+  position: relative;
+  border-bottom: 0px solid #4CB4C3;
+  vertical-align: middle;
+}
+
+.header-link.xinabox:hover {
+  border-bottom: 10px solid #4CB4C3;
+  color: #4CB4C3;
+  top: -10px;
+  opacity: 1;
+}
+
+.header-link.xinabox:active {
+  border-bottom: 10px solid white;
+}
+
+
+/*joanna*/
+.header-link.joanna {
+  opacity: 0.7;
+  color: #7CB342;
+}
+
+.header-link.joanna:before {
+  content: '';
+  display: inline-block;
+  white-space: nowrap;
+  height: 2px;
+  width: 0;
+  background: #7CB342;
+  position: absolute;
+  bottom: 4.5vh;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+}
+
+.header-link.joanna:hover {
+  opacity: 1;
+}
+
+.header-link.joanna:hover:before {
+  width: 50px;
+}
+
+
+/*word*/
+.header-link.word {
+  color: #EBC4C2;
+  font-family: serif;
+}
+
+.header-link.word:before {
+  content: '\25C6';
+  margin-right: 0.5vw;
+}
+
+#home.word:before {
+  content: '' !important;
+}
+
+.header-link.word:hover {
+  color: white;
+}
+
+
+/*sqar*/
+.header-link.sqar {
+  color: white;
+  opacity: 0.7;
+  font-weight: 100;
+}
+
+.header-link.sqar:hover {
+  opacity: 1;
+}
+
+.header-link.sqar:before {
+  content: '';
+  display: inline-block;
+  height: 7vh;
+  margin-right: 1vw;
+  vertical-align: middle;
+  width: 1px;
+  background-color: black;
+}
+
+
+/*bri*/
+.header-link.bri {
+  padding-right: 1vw;
+  margin-right: -1vw;
+  height: 3vh;
+  margin-left: 0.5vw;
+  color: #51c7a8;
+  border-radius: 100px;
+  background-color: transparent;
+}
+
+.header-link.bri:hover {
+  background-color: #215e4e;
+  text-shadow: -0px -0px 2px rgba(255, 255, 255, 0.6)
+}
+
+.header-link.bri:before {
+  content: '';
+  display: inline-block;
+  height: 3vh;
+  margin-right: 1vw;
+  width: 1px;
+  background-color: #51c7a8;
+}
+
+#home.bri:before {
+  width: 0 !important;
+}

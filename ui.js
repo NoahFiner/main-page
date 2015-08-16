@@ -107,5 +107,8 @@ $(document).ready(function() {
   })
   $("#logo-inner").click(function() {
     changeTheme('home');
+    scrolling = true;
+    setTimeout(function() {scrolling = false}, 500);
+    scrollio("home");
   })
 })

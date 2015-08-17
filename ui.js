@@ -16,12 +16,13 @@ var scrolling = false;
 var getScrolls = function() {
   var height = window.innerHeight;
   var boxHeight = height*0.85;
+  var hrHeight = height*0.25;
   homeScroll = -height*0.15;
-  xinaboxScroll = boxHeight*2 - height*0.15;
-  joannaScroll = boxHeight*3 - height*0.15;
-  wordScroll = boxHeight*4 - height*0.15;
-  sqarScroll = boxHeight*5 - height*0.15;
-  briScroll = boxHeight*6 - height*0.15;
+  xinaboxScroll = (boxHeight + hrHeight)*2 - height*0.40;
+  joannaScroll = (boxHeight + hrHeight)*3 - height*0.40;
+  wordScroll = (boxHeight + hrHeight)*4 - height*0.40;
+  sqarScroll = (boxHeight + hrHeight)*5 - height*0.40;
+  briScroll = (boxHeight + hrHeight)*6 - height*0.40;
 }
 
 getScrolls();
@@ -38,6 +39,7 @@ scrollioTo = function(dist) {
 }
 
 var scrollio = function(where) {
+  setDropdown(false);
   switch(where) {
     case 'home':
       scrollioTo(homeScroll);
@@ -92,19 +94,40 @@ $(window).on('scroll', function(e) {
   }
 });
 
+var dropdown = false;
+
+var setDropdown = function(what) {
+  if(what) {
+    $("#dropdown, #dropdown-icon").addClass("active");
+  }
+  else {
+    $("#dropdown, #dropdown-icon").removeClass("active");
+  }
+}
+
 $(document).ready(function() {
   $(window).resize(function() {
     getScrolls();
   })
 
 
+  $("#dropdown-icon").click(function() {
+    if(dropdown) {
+      setDropdown(false);
+      dropdown = false;
+    }
+    else {
+      setDropdown(true);
+      dropdown = true;
+    }
+  })
   $(".header-link").click(function() {
     var id = $(this).attr("id");
     changeTheme(id);
     scrolling = true;
     setTimeout(function() {scrolling = false}, 500);
     scrollio(id+"");
-  })
+  });
   $("#logo-inner").click(function() {
     changeTheme('home');
     scrolling = true;

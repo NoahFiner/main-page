@@ -324,7 +324,7 @@ body, html {
   width: 0;
   background: #7CB342;
   position: absolute;
-  bottom: 4.5vh;
+  bottom: 0vh;
   transition: all 0.25s;
   -webkit-transition: all 0.25s;
 }
@@ -414,12 +414,18 @@ body, html {
 
 /*content!*/
 
+#content-top {
+  height: 15vh;
+  margin: 0;
+  background-color: black;
+  position: relative;
+  display: block;
+}
 
 #content-outer {
   width: 100vw;
   height: auto;
   position: relative;
-  top: 15vh;
 }
 
 .content-outer {
@@ -483,18 +489,18 @@ body, html {
   text-shadow: 0 0 5px #000;
 }
 
-#home2-c p, a {
+#home2-c p, a, .url {
   color: #A2DB94;
   text-shadow: 0 0 5px #000;
 }
 
-#home2-c a {
+#home2-c a, .url {
   color: #397A29;
   text-decoration: none;
   font-weight: 900;
 }
 
-#home2-c a:hover {
+#home2-c a:hover, .url:hover {
   color: #CAEBC2;
   cursor: pointer;
 }
@@ -523,7 +529,7 @@ body, html {
 .testy {
   position: absolute;
   top: 20vh;
-  font-size: 2vw;
+  font-size: 1.5vw;
   color: white;
 }
 
@@ -583,9 +589,157 @@ body, html {
 }
 
 
+.g-content-upper {
+  height: 20vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: auto 90%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.g-content-lower {
+  height: 60vh;
+  width: 100vw;
+  position: relative;
+}
+
+.g-content-left {
+  overflow: scroll;
+  position: absolute;
+  left: 0;
+  height: 60vh;
+  width: 35vw;
+  margin-left: 5vw;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.url {
+  font-weight: 900;
+  text-align: center !important;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2vw;
+  display: block;
+}
+
+.g-content-left p, a {
+  color: white;
+  font-size: 1.5vw;
+  position: relative;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.status {
+  font-size: 5vw !important;
+  position: relative;
+  text-align: center;
+  font-weight: 900;
+}
+
+.browser-header {
+  font-size: 4vw !important;
+  text-align: center;
+  display: block;
+  font-weight: 900;
+}
+
+.wip {
+  color: red !important;
+}
+
+.browser {
+  color: #56B83D !important;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+.nope {
+  color: red !important;
+}
+
+.g-content-right {
+  position: absolute;
+  right: 0;
+  height: 60vh;
+  width: 50vw;
+  margin-right: 5vw;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid white;
+}
+
+.g-content-right-upper {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid white;
+  height: 10vh;
+  line-height: 10vh;
+}
+
+.right-upper-header {
+  color: black;
+  font-size: 3vw;
+  vertical-align: middle;
+  font-weight: 900;
+  margin-left: 20px;
+}
+
+.g-content-right-scrollable {
+  overflow: scroll;
+  height: 50vh;
+  width: 100%;
+}
+
+.g-content-right-scrollable > img {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  height: auto;
+  border: 2px solid black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 #xinabox-c {
   background-color: #1f1f1f;
 }
+#xinabox-c .content {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#xinabox-c .g-content-upper {
+  background-image: url('xinabox/logo.png');
+}
+
+#joanna-c .content {
+  background-color: rgba(25, 50, 25, 0.5);
+}
+#joanna-c .g-content-upper {
+  background-image: url('joanna/logo.png');
+}
+
+#word-c .g-content-upper {
+  background-image: url('word/logo.png');
+}
+
+#word-c * {
+  font-family: serif !important;
+}
+
+#sqar-c .g-content-upper {
+  background-image: url('sqar/logo.png');
+}
+
+#bri-c .content {
+  background-color: rgba(31, 149, 118, 0.8)
+}
+#bri-c .g-content-upper {
+  background-image: url('bri/logo.png');
+}
+
 #joanna-c {
   background-color: green;
 }

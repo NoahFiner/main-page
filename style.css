@@ -102,6 +102,10 @@ body, html {
   -webkit-transform: rotate(90deg);
 }
 
+.hr-header.home {
+  opacity: 0 !important;
+}
+
 #logo-inner.xinabox {
   border: 1px solid #4CB4C3;
   background-color: transparent;
@@ -777,6 +781,7 @@ body, html {
   color: white;
   font-size: 1.5vw;
   position: relative;
+  text-shadow: 0 0 2px #000;
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -855,24 +860,34 @@ body, html {
   border: 2px solid black;
 }
 
-.g-content-right-scrollable > img:nth-child(0) {
+.i0 {
   top: 0;
   left: 0;
 }
 
-.g-content-right-scrollable > img:nth-child(1) {
+.i1 {
   top: 0;
   right: 0;
 }
 
-.g-content-right-scrollable > img:nth-child(2) {
-  bottom: 0;
+.i2 {
+  top: 50%;
   left: 0;
 }
 
-.g-content-right-scrollable > img:nth-child(3) {
-  bottom: 0;
+.i3 {
+  top: 50%;
   right: 0;
+}
+
+.i2:hover {
+  top: 10%;
+  bottom: 0 !important;
+}
+
+.i3:hover {
+  top: 10%;
+  bottom: 0 !important;
 }
 
 .g-content-right-scrollable > img:hover {
@@ -887,14 +902,21 @@ body, html {
   background-color: #1f1f1f;
 }
 #xinabox-c .content {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 #xinabox-c .g-content-upper {
   background-image: url('xinabox/logo.png');
 }
 
 #joanna-c .content {
-  background-color: rgba(25, 50, 25, 0.5);
+  background-color: rgba(225, 250, 225, 0.75);
+}
+#joanna-c p, #bri-c p {
+  color: black;
+  text-shadow: 0 0 0 transparent;
+}
+#joanna-c .hr, #bri-c .hr {
+  background-color: black;
 }
 #joanna-c .g-content-upper {
   background-image: url('joanna/logo.png');
@@ -913,7 +935,7 @@ body, html {
 }
 
 #bri-c .content {
-  background-color: rgba(31, 149, 118, 0.8)
+  background-color: rgba(131, 249, 218, 0.8)
 }
 #bri-c .g-content-upper {
   background-image: url('bri/logo.png');

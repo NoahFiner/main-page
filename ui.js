@@ -112,6 +112,7 @@ var setDropdown = function(what) {
 }
 
 $(document).ready(function() {
+  changeTheme('home');
   $(window).resize(function() {
     getScrolls();
   })

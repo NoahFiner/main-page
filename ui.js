@@ -29,13 +29,6 @@ var getScrolls = function() {
   wordScroll = (boxHeight + hrHeight)*4 - height*0.40;
   sqarScroll = (boxHeight + hrHeight)*5 - height*0.40;
   briScroll = (boxHeight + hrHeight)*6 - height*0.40;
-  if(window.mobilecheck()) {
-    xinaboxScroll = (boxHeight + hrHeight)*2 + height*0.40;
-    joannaScroll = (boxHeight + hrHeight)*3 + height*0.40;
-    wordScroll = (boxHeight + hrHeight)*4 + height*0.40;
-    sqarScroll = (boxHeight + hrHeight)*5 + height*0.40;
-    briScroll = (boxHeight + hrHeight)*6 + height*0.40;
-  }
 }
 
 getScrolls();
